@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<title>Baucampus</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://www.baucampus.de/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://baucampus.ch/w3.css">
+<link rel="stylesheet" type="text/css" href="https://baucampus.ch/style.css">
+  <link rel="stylesheet" href="https://baucampus.ch/ideen-style.css">
+<link rel="stylesheet" type="text/css" href="https://baucampus.ch/kontakt-style.css">
+<body id="myPage">
+<style>
+.w3-osk-customs{z-index:5000;   backdrop-filter: invert(.2) blur(10px);}
+ .viewport-header {
+	 position: relative;
+	 height: 100%;
+	 text-align: center;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ html {
+	 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	 font-size: 150%;
+	 line-height: 1.4;
+} 
+ .viewport-header {
+	 position: relative;
+	 height: 100%;
+	 text-align: center;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ h1 {
+	 font-family: 'Syncopate', sans-serif;
+	 color: white;
+	 text-transform: uppercase;
+	 letter-spacing: 2vw;
+	 line-height: 1.5;
+	 font-size: 3vw;
+	 text-align: center;
+}
+ h1 span {
+	 display: block;
+	 font-size: 8vw;
+	 letter-spacing: -1vw;
+}
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+
+  .demo a:hover {
+  opacity: .5;
+}
+
+#section03 a {
+  padding-top: 60px;
+}
+#section03 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section03 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+#section03 a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+:root {
+  --primary: #3F51B5;
+  --dark-primary: #303F9F;
+  --light-primary: #C5CAE9;
+  --text: #FFFFFF;
+  --primary-text: #212121;
+  --secondary-text: #757575;
+  --accent: #FF4081;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  background: var(--light-primary);
+  width: 5px;
+  height: 95%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  float: right;
+  padding: 40px 30px 10px 30px;
+}
+
+.timeline-item:nth-child(even) .timeline-content .date {
+  right: auto;
+  left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  top: 30px;
+  left: -15px;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent var(--light-primary) transparent transparent;
+}
+
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 10px 30px;
+  border-radius: 4px;
+  background: #f5f5f5;
+  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+}
+
+.timeline-content::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  top: 30px;
+  right: -15px;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #f5f5f5;
+}
+
+.timeline-img {
+  width: 30px;
+  height: 30px;
+  background: var(--primary);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-top: 25px;
+  margin-left: -15px;
+}
+
+/* Basis-Stile für den Link */
+.timeline a {
+	background-color: var(--primary);
+	color: var(--text);
+	padding: 8px 20px;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	display: inline-block;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px -1px rgba(0, 0, 0, .6);
+}
+
+/* Stile für den Link im Hover-, Aktiv- und Fokus-Status */
+.timline a:hover, a:active, a:focus {
+	background-color: darken(var(--primary), 10%);
+	color: var(--text);
+	text-decoration: none;
+}
+
+/* Stile für die Timeline-Karte */
+.timeline-card {
+	padding: 0!important;
+}
+
+/* Stile für den Text innerhalb der Timeline-Karte */
+.timeline-card p {
+	padding: 0 20px;
+}
+
+/* Stile für den Link innerhalb der Timeline-Karte */
+.timeline-card a {
+	margin-left: 20px;
+}
+
+/* Stile für das Bild und den Titelkopf einer Timeline-Elementkarte */
+.timeline-item .timeline-img-header {
+	background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('https://picsum.photos/1000/800/?random') center center no-repeat;
+	background-size: cover;
+	height: 200px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+/* Stile für den Titelkopf innerhalb des Bilds einer Timeline-Elementkarte */
+.timeline-item .timeline-img-header h2 {
+	color: var(--text);
+	position: absolute;
+	bottom: 5px;
+	left: 20px;
+}
+
+/* Stile für das Blockzitat */
+blockquote {
+	margin-top: 30px;
+	color: var(--secondary-text);
+	border-left-color: var(--primary);
+	padding: 0 20px;
+}
+
+/* Stile für das Datum */
+.date {
+	background: var(--accent);
+	display: inline-block;
+	color: var(--text);
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Medienabfrage für Bildschirme mit einer maximalen Breite von 768px */
+@media screen and (max-width: 768px) {
+
+	/* Anpassung des Timeline-Pfeils und des Bildes in der Timeline */
+	.timeline::before {
+		left: 50px;
+	}
+
+	.timeline-img {
+		left: 50px;
+	}
+
+	/* Anpassung des Inhaltsbereichs der Timeline-Karte */
+	.timeline-content {
+		max-width: 100%;
+		width: auto;
+		margin-left: 70px;
+	}
+
+	/* Anpassung von geraden Timeline-Elementen */
+	.timeline-item:nth-child(even) .timeline-content {
+		float: none;
+	}
+
+	/* Anpassung von ungeraden Timeline-Elementen */
+	.timeline-item:nth-child(odd) .timeline-content::after {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		width: 0;
+		height: 0;
+		top: 30px;
+		left: -15px;
+		border-width: 10px 15px 10px 0;
+		border-color: transparent var(--background-color) transparent transparent;
+	}
+}
+
+</style>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+
+<div class="w3-top w3-text-white">
+
+  <div class="w3-bar w3-text-white" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-left" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      Baucampus
+    </a>
+
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      Nav<i class="fa fa-bars"></i>
+    </a>
+
+    <a href="https://baucampus.com" class="w3-hide-small w3-left hover-underline-animation oskkk"style="padding-left:100px;">Baucampus</a>
+   <a href="https://baucampus.com/kontakt" class=" w3-hide-small w3-right hover-underline-animation oskkk" style="padding-right:100px;">Kontakt</a>
+   <a href="#5" class=" w3-hide-small w3-right hover-underline-animation oskkk">Vorteile</a>
+   <a href="#4" class=" w3-hide-small w3-right hover-underline-animation oskkk">Team</a>
+   <a href="#3" class=" w3-hide-small w3-right hover-underline-animation oskkk">Netzwerk</a>
+   <a href="#2" class=" w3-hide-small w3-right hover-underline-animation oskkk">Vision</a>
+
+
+
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="https://baucampus.ch" class="w3-bar-item w3-button"  onclick="toggleFunction()">Baucampus</a>
+    <a href="https://baucampus.ch" class="w3-bar-item w3-button"  onclick="toggleFunction()">Ideen</a>
+    <a href="https://baucampus.ch" class="w3-bar-item w3-button" onclick="toggleFunction()">Über Uns</a>
+    <a href="https://baucampus.ch" class="w3-bar-item w3-button" onclick="toggleFunction()">Kontakt</a>
+  </div>
+</div>
+<script>
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-animate-top" + " w3-osk-customs";
+    } else {
+        navbar.className = navbar.className.replace(" w3-animate-top w3-osk-customs", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+
+<!-- Image Header -->
+
+<div class="w3-display-container w3-animate-opacity w3-center" id="1" >
+<img  src="pictures/8.jpg" alt="Mein Haus" style="width:100%;min-height:350px;max-height:100vh; object-fit: cover; object-position:center;">
+<div id="section03" class="demo">
+    <a href="#video"><span></span>Scroll</a>
+</div>
+</div>
+
+
+<div>
+<video id="video" width="100%" controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+</div>
+
+<div class="timeline">
+    <div class="container">
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+  
+        <div class="timeline-content js--fadeInLeft">
+          <h2>Title</h2>
+          <div class="date">1 MAY 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div> 
+  
+      <div class="timeline-item">
+  
+        <div class="timeline-img"></div>
+  
+        <div class="timeline-content timeline-card js--fadeInRight">
+          <div class="timeline-img-header">
+            <h2>Card Title</h2>
+          </div>
+          <div class="date">25 MAY 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+  
+      </div>   
+  
+      <div class="timeline-item">
+  
+        <div class="timeline-img"></div>
+  
+        <div class="timeline-content js--fadeInLeft">
+          <div class="date">3 JUN 2016</div>
+          <h2>Quote</h2>
+          <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+        </div>
+      </div>   
+  
+      <div class="timeline-item">
+  
+        <div class="timeline-img"></div>
+  
+        <div class="timeline-content js--fadeInRight">
+          <h2>Title</h2>
+          <div class="date">22 JUN 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>   
+  
+      <div class="timeline-item">
+  
+        <div class="timeline-img"></div>
+  
+        <div class="timeline-content timeline-card js--fadeInLeft">
+          <div class="timeline-img-header">
+            <h2>Card Title</h2>
+          </div>
+          <div class="date">10 JULY 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>   
+  
+      <div class="timeline-item">
+  
+        <div class="timeline-img"></div>
+  
+        <div class="timeline-content timeline-card js--fadeInRight">
+          <div class="timeline-img-header">
+            <h2>Card Title</h2>
+          </div>
+          <div class="date">30 JULY 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>  
+  
+      <div class="timeline-item">
+  
+        <div class="timeline-img"></div>
+  
+        <div class="timeline-content js--fadeInLeft">
+          <div class="date">5 AUG 2016</div>
+          <h2>Quote</h2>
+          <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+        </div>
+      </div>   
+  
+      <div class="timeline-item">
+  
+        <div class="timeline-img"></div>
+  
+        <div class="timeline-content timeline-card js--fadeInRight">
+          <div class="timeline-img-header">
+            <h2>Card Title</h2>
+          </div>
+          <div class="date">19 AUG 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>  
+  
+      <div class="timeline-item">
+  
+        <div class="timeline-img"></div>
+  
+        <div class="timeline-content js--fadeInLeft">
+          <div class="date">1 SEP 2016</div>
+          <h2>Title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>   
+  
+  
+  
+    </div>
+</div>
+  
+
+</body> 
+</html>

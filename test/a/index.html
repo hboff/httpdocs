@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<style>
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+blockquote {
+  font-size: 3rem;
+}
+
+cite {
+  display: block;
+  text-align: right;
+  font-family: Verdana, Arial, sans-serif;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  font-style: normal;
+}
+
+blockquote q {
+  font-family: Georgia, serif;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+}
+
+blockquote q span {
+  will-change: opacity, filter;
+  opacity: 0;
+  filter: blur(0px);
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q:before {
+  content: open-quote;
+  margin-right: 0.8rem;
+}
+
+q:after {
+  content: close-quote;
+}
+
+q:before, q:after {
+  color: #ccc;
+  font-size: 4rem;
+}
+</style>
+  <meta charset="UTF-8">
+  <title>CodePen - Quote Effect w/ Web Animation API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<blockquote contenteditable="true"><q>Ich habe heute Geburtstag.</q>
+  <cite>Freda</cite>
+</blockquote>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

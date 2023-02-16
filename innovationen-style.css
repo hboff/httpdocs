@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	font-family: 'Poppins', sans-serif;
+	background-color: #121212;
+	display: flex;
+}
+
+canvas {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+h2 {
+	font-size: 80px;
+	color: white;
+	pointer-events: none;
+	touch-action:pan-y;
+   	 position: absolute;
+    	top: 50%;  
+    	left: 50%; 
+    	transform: translate(-50%, -50%);
+	align-items: center;
+	justify-content: center;
+}
+.sectionerfooter {
+	color: white;
+	touch-action:pan-y;
+   	 position: absolute;
+    	top: 0%;  
+    	left: 0%; 
+	width:100%;
+
+}
+.sectionernav {
+	color: white;
+	touch-action:pan-y;
+   	 position: absolute;
+    	top: 0%;  
+    	left: 0%; 
+	width:100%;
+}
+
+
+.abc{
+	font-size: 80px;
+	color: white;
+	pointer-events: none;
+	touch-action:pan-y;
+   	 position: absolute;
+    	top: 80%;  
+    	left: 50%; 
+    	transform: translate(-50%, -50%);
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.8s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.oskkk {
+color:white;
+font-size: 20px;
+font-family: "Segoe UI",Arial,sans-serif;
+font-weight: 400;
+margin: 16px!important;
+text-decoration: none; 
+z-index: 100;
+
+}
