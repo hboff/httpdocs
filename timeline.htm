@@ -11,7 +11,8 @@
     <link rel="stylesheet" type="text/css" href="/kontakt-style-neu.css">
     <link rel="stylesheet" href="./style-timeline.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" />
+  
 <script  src="./script.js"></script>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
@@ -391,6 +392,16 @@
     Your browser does not support HTML video.
   </video>
   </div>
+
+  <div id="map"style="width:100%; height:400px;"class="mt-5"></div></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
+    <script>
+        var map = L.map('map').setView([51.165691, 10.451526], 5);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    </script>
 
   <footer style="padding-top:2vh; color:#9fa3a7; background-color:#F5F5F8; font-size:16px;">
 
